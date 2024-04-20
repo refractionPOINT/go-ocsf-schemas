@@ -2,8 +2,6 @@
 package gcs
 
 import (
-	"time"
-
 	"github.com/go-playground/validator/v10"
 )
 
@@ -26,9 +24,9 @@ type ProcessActivity struct {
 	Count                uint                   `json:"count" validate:"omitempty"`
 	Device               *Device                `json:"device" validate:"omitempty"`
 	Duration             uint                   `json:"duration" validate:"omitempty"`
-	EndTime              *time.Time             `json:"end_time" validate:"omitempty"`
+	EndTime              string                 `json:"end_time" validate:"omitempty"`
 	Enrichments          *[]Enrichment          `json:"enrichments" validate:"omitempty"`
-	EventTime            *time.Time             `json:"time" validate:"required"`
+	EventTime            string                 `json:"time" validate:"required"`
 	ExitCode             int                    `json:"exit_code" validate:"omitempty"`
 	InjectionType        *string                `json:"injection_type" validate:"omitempty"`
 	InjectionTypeID      int                    `json:"injection_type_id" validate:"omitempty"`
@@ -41,7 +39,7 @@ type ProcessActivity struct {
 	RequestedPermissions int                    `json:"requested_permissions" validate:"omitempty"`
 	Severity             string                 `json:"severity" validate:"omitempty"`
 	SeverityID           uint8                  `json:"severity_id" validate:"omitempty"`
-	StartTime            *time.Time             `json:"start_time" validate:"omitempty"`
+	StartTime            string                 `json:"start_time" validate:"omitempty"`
 	Status               string                 `json:"status" validate:"omitempty"`
 	StatusCode           string                 `json:"status_code" validate:"omitempty"`
 	StatusDetails        string                 `json:"status_detail" validate:"omitempty"`
