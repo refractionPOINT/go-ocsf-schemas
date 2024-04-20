@@ -9,7 +9,7 @@ import (
 
 type Process struct {
 	CommandLine        string                 `json:"cmd_line" validate:"omitempty"`
-	CreatedTimed       *time.Time             `json:"created_time" validate:"omitempty"`
+	CreatedTimed       string                 `json:"created_time" validate:"omitempty"`
 	ExtendedAttributes map[string]interface{} `json:"xattributes" validate:"omitempty"`
 	File               *File                  `json:"file" validate:"omitempty"`
 	Integrity          string                 `json:"integrity" validate:"omitempty"`
@@ -21,7 +21,7 @@ type Process struct {
 	ProcessID          uint                   `json:"pid" validate:"omitempty"`
 	ProcessUID         string                 `json:"uid" validate:"omitempty"`
 	Sandbox            string                 `json:"sandbox" validate:"omitempty"`
-	TerminatedTime     *time.Time             `json:"terminated_time" validate:"omitempty"`
+	TerminatedTime     string                 `json:"terminated_time" validate:"omitempty"`
 	ThreadID           uint                   `json:"tid" validate:"omitempty"`
 	User               *User                  `json:"user" validate:"omitempty"`
 	UserSession        *Session               `json:"session" validae:"omitempty"`
