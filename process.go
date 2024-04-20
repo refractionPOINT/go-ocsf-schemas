@@ -13,7 +13,7 @@ type Process struct {
 	ExtendedAttributes map[string]interface{} `json:"xattributes" validate:"omitempty"`
 	File               *File                  `json:"file" validate:"omitempty"`
 	Integrity          string                 `json:"integrity" validate:"omitempty"`
-	IntegrityLevel     uint8                  `json:"integrity_id" validate:"omitempty"`
+	IntegrityLevel     int                    `json:"integrity_id" validate:"omitempty"`
 	Lineage            []string               `json:"lineage" validate:"omitempty"`
 	LoadedModules      []string               `json:"loaded_modules" validate:"omitempty"`
 	Name               string                 `json:"name" validate:"omitempty"`
